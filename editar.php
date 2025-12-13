@@ -26,9 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->execute();
 
     if ($stmt->execute() == true) {
-        echo "Cadastro editado com sucesso.";
+        $mensagemSucesso = "Edição concluída";
     } else {
-        echo "Erro na edição.";
+        $mensagemErro = "Erro da edição";
     }
 }
 
@@ -42,6 +42,18 @@ $fornecedor = $stmt->fetch();
 ?>
 
 <main>
+    <!-- Retorno do sucesso ou erro na edição -->
+    <?php if (isset($mensagemSucesso)): ?>
+        <div class="alert alert-success col-3 m-auto mb-2" role="alert">
+            <?php echo $mensagemSucesso; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if (isset($mensagemErro)): ?>
+        <div class="alert alert-danger col-3 m-auto mb-2" role="alert">
+            <?php echo $mensagemErro; ?>
+        </div>
+    <?php endif; ?>
     <form action="" method="post" autocomplete="off">
         <div class="container">
             <div class="row justify-content-center">

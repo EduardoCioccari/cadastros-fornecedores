@@ -28,7 +28,10 @@ $listaFornecedores = $stmt->fetchAll();
                         <td><?php echo $fornecedor["cnpj_fornecedor"] ?></td>
                         <td><?php echo $fornecedor["email_fornecedor"] ?></td>
                         <td><?php echo $fornecedor["telefone_fornecedor"] ?></td>
-                        <td><a href="editar.php?id=<?php echo $fornecedor['id_fornecedor'] ?>"><i class="bi bi-pencil-square"></i></a></td>
+                        <td>
+                            <a href="editar.php?id=<?php echo $fornecedor['id_fornecedor'] ?>"><i class="bi bi-pencil-square"></i></a>
+                            <a href="excluir.php?id=<?php echo $fornecedor['id_fornecedor'] ?>"><i class="bi-trash"></i></a>
+                        </td>
                     </tr>
                 <?php } ?>
             </tbody>
