@@ -1,6 +1,6 @@
 <?php
 
-require_once "db_conexao.php";
+require_once "../config/db_conexao.php";
 
 $id = $_GET["id"];
 
@@ -11,5 +11,5 @@ $stmt->bindValue(":id_fornecedor", $id);
 
 $stmt->execute();
 
-header("location: index.php?msg=excluido");
+header("location: ../index.php?msg=excluido");
 exit();

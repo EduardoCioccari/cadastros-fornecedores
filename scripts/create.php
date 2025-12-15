@@ -1,7 +1,7 @@
 
 <?php
 
-require_once "db_conexao.php";
+require_once "../config/db_conexao.php";
 
 $nome_fornecedor = $_POST["nome_fornecedor"];
 $email_fornecedor = $_POST["email_fornecedor"];
@@ -23,7 +23,7 @@ try {
     ]);
 
     if ($stmt->rowCount() > 0) {
-        header("location: index.php");
+        header("location: /cadastros-fornecedor/index.php");
         exit();
     }
 } catch (PDOException $e) {

@@ -1,10 +1,10 @@
 <?php
-require_once "header.php";
+require_once "../layout/header.php";
 
 ?>
 
 <main>
-    <form action="create.php" method="post" autocomplete="off">
+    <form action="../scripts/create.php" method="post" autocomplete="off">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6">
