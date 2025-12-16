@@ -7,7 +7,6 @@ $senha = "";
 try {
     $conexao = new PDO($dsn, $usuario, $senha);
 
-
     $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
 

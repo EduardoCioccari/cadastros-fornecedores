@@ -1,4 +1,4 @@
-console.log("O arquivo JS foi carregado com sucesso!")
+console.log("arquivo JS carregado")
 var modalExcluir = document.getElementById("modalExcluir")
 
 modalExcluir.addEventListener("show.bs.modal", function (event) {
