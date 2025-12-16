@@ -21,14 +21,14 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="/cadastros-fornecedor/views/cadastrar.php">Cadastrar</a>
+                                <a class="btn btn-outline-danger me-2" href="/cadastros-fornecedor/views/cadastrar.php">Cadastrar</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/cadastros-fornecedor/index.php">Consultar</a>
+                                <a class=" btn btn-outline-danger" href="/cadastros-fornecedor/index.php">Consultar</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Digitar busca" aria-label="Search" />
+                        <form action="index.php" method="get" class="d-flex" role="search">
+                            <input class="form-control me-2 focus-ring" name="buscar" type="search" placeholder="Digitar busca" aria-label="Search" />
                             <button class="btn btn-outline-danger" type="submit">Buscar</button>
                         </form>
                     </div>

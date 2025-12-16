@@ -2,10 +2,22 @@
 require_once "layout/header.php";
 require_once "config/db_conexao.php";
 
-$sql = "SELECT * FROM fornecedor";
-$stmt = $conexao->prepare($sql);
-$stmt->execute();
-$listaFornecedores = $stmt->fetchAll();
+// Filtro de busca no banco.
+if (isset($_GET["buscar"])) {
+    $sql = "SELECT * FROM fornecedor WHERE nome_fornecedor LIKE :buscar
+    OR cnpj_fornecedor LIKE :buscar
+    OR email_fornecedor LIKE :buscar
+    OR telefone_fornecedor LIKE :buscar";
+    $stmt = $conexao->prepare($sql);
+    $stmt->bindValue(":buscar", "%" . $_GET["buscar"] . "%");
+    $stmt->execute();
+    $listaFornecedores = $stmt->fetchAll();
+} else {
+    $sql = "SELECT * FROM fornecedor";
+    $stmt = $conexao->prepare($sql);
+    $stmt->execute();
+    $listaFornecedores = $stmt->fetchAll();
+}
 ?>
 <main>
     <?php if (isset($_GET['msg']) && $_GET['msg'] == 'excluido'): ?>
