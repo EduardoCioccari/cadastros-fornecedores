@@ -58,6 +58,7 @@ $fornecedor = $stmt->fetch();
 <script src="../js/mascara_cnpj.js"></script>
 <script src="../js/mascara_celular.js"></script>
 <script src="../js/validacao_formulario.js"></script>
+<script src="../js/mascaras.js"></script>
 </body>
 
 </html>

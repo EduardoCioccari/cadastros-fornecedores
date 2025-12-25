@@ -11,5 +11,6 @@ $stmt->bindValue(":id_fornecedor", $id);
 
 $stmt->execute();
 
+// Após exclusão atualizo a index para acrescentar o modal de exclusão.
 header("location: ../index.php?msg=excluido");
 exit();

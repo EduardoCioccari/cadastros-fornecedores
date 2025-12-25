@@ -6,7 +6,7 @@ function validarFormulario() {
   var cnpjLimpo = cnpjFornecedor.replace(/\D/g, "")
   var telefoneLimpo = telefoneFornecedor.replace(/\D/g, "")
 
-  // validando cnpj
+  // validando tamanho cnpj
   if (cnpjLimpo.length !== 14) {
     alert("Erro no preenchimento do CNPJ.")
     return false

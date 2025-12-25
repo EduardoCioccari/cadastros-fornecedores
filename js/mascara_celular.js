@@ -1,5 +1,5 @@
-function mascaraCelular(campo) {
-  var v = campo.value
+function mascaraCelular(celular) {
+  var v = celular.value
 
   // Remove tudo o que não é dígito
   v = v.replace(/\D/g, "")
@@ -15,5 +15,5 @@ function mascaraCelular(campo) {
   // Coloca o hífen
   v = v.replace(/(\d{5})(\d)/, "$1-$2")
 
-  campo.value = v
+  celular.value = v
 }

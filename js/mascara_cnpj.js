@@ -1,5 +1,5 @@
-function mascaraCNPJ(campo) {
-  var v = campo.value
+function mascaraCNPJ(cnpj) {
+  var v = cnpj.value
 
   // Remove tudo o que não é número
   v = v.replace(/\D/g, "")
@@ -15,5 +15,5 @@ function mascaraCNPJ(campo) {
   v = v.replace(/\.(\d{3})(\d)/, ".$1/$2")
   v = v.replace(/(\d{4})(\d)/, "$1-$2")
 
-  campo.value = v
+  cnpj.value = v
 }
